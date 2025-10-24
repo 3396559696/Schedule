@@ -1,0 +1,192 @@
+.top-bar {
+  display: flex;
+  padding: 10rpx;
+  gap: 10rpx;
+  background-color: #f5f5f5;
+  flex-wrap: wrap;
+}
+
+.dialog-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.dialog {
+  width: 600rpx;
+  background: white;
+  border-radius: 10rpx;
+  padding: 30rpx;
+}
+.dialog-title {
+  font-size: 36rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+.dialog-input {
+  border: 1rpx solid #ccc;
+  padding: 15rpx;
+  border-radius: 5rpx;
+  margin-bottom: 20rpx;
+}
+.dialog-btns {
+  display: flex;
+  gap: 20rpx;
+}
+.dialog-btns button {
+  flex: 1;
+}
+
+.course-pool {
+  padding: 20rpx;
+  background-color: #f0f7ff;
+  border: 1rpx solid #e0e0e0;
+  margin: 10rpx;
+  border-radius: 8rpx;
+}
+.pool-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 15rpx;
+}
+.pool-hint {
+  font-size: 24rpx;
+  color: #666;
+  font-weight: normal;
+  margin-left: 10rpx;
+}
+.selected-hint {
+  font-size: 24rpx;
+  color: #1890ff;
+  margin-left: 10rpx;
+}
+.pool-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rpx;
+}
+.pool-item {
+  padding: 15rpx 20rpx;
+  background-color: #fff;
+  border: 1rpx solid #ccc;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+  cursor: pointer;
+}
+
+.pool-item-selected {
+  background-color: #1890ff;
+  color: white;
+  border-color: #096dd9;
+}
+
+.delete-area {
+  position: fixed;
+  bottom: 50rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500rpx;
+  height: 100rpx;
+  background-color: #ff4d4f;
+  color: white;
+  border-radius: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 90;
+  opacity: 0.8;
+}
+.delete-text {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.timetable {
+  margin: 10rpx;
+  position: relative;
+  padding-bottom: 150rpx; 
+}
+.weekdays {
+  display: flex;
+  margin-left: 80rpx; 
+}
+.weekday {
+  width: 100rpx;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1rpx solid #e0e0e0;
+  background-color: #f9f9f9;
+  font-size: 24rpx;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+}
+.grid-cell {
+  display: flex;
+  height: 100rpx;
+  position: relative;
+}
+.grid-cell::before {
+  content: attr(data-skjc);
+  width: 80rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1rpx solid #e0e0e0;
+  background-color: #f9f9f9;
+  font-size: 24rpx;
+}
+.grid-day {
+  width: 100rpx;
+  height: 100rpx;
+  border: 1rpx solid #e0e0e0;
+  position: relative;
+  box-sizing: border-box;
+}
+/* 可点击格子样式（有选中课程时）*/
+.grid-day-clickable {
+  cursor: pointer;
+}
+.grid-day-clickable:active {
+  background-color: #e6f7ff;
+  border-color: #1890ff;
+}
+
+/* 课程卡片 */
+.course-item {
+  position: absolute;
+  top: 2rpx;
+  left: 2rpx;
+  right: 2rpx;
+  bottom: 2rpx;
+  border-radius: 4rpx;
+  padding: 5rpx;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: move;
+}
+.course-name {
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  word-break: break-all;
+}
+.dialog-content {
+  font-size: 28rpx;
+  color: #666;
+  margin: 20rpx 0 30rpx;
+  line-height: 1.5;
+}
